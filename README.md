@@ -19,6 +19,7 @@ This guide walks users through creating a virtual machine that runs Debian/Stret
 * [cURL](https://curl.se/)
 * [Composer](https://getcomposer.org/)
 * [Git](https://git-scm.com/)
+* [Java SE Development Kit 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 
 ## Installation Process
 #### This solution uses NFS. In order to use NFS with Vagrant on Windows, we need to install [this Vagrant NFS plugin](https://github.com/winnfsd/vagrant-winnfsd). Simply open a command prompt and run the following command to install the NFS plugin: 
@@ -32,8 +33,10 @@ This guide walks users through creating a virtual machine that runs Debian/Stret
 3. Once the repo has been cloned, cd into the repo directory and create a new folder called ‘src’. This will hold your Magento project.
 > cd C:\Users\\*user*\\*magento-projects*\\*magento-now* <br/>
 > mkdir src
-4. cd into the 'hashi' directory and run ‘vagrant up’. This will begin the setup of your virtual machine server with all the necessary Magento 2.3.x requirements.
+4. Head over to [Oracle](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) and download the Linux x64 Compressed Archive file and place it in your 'hashi' folder. 
+![linux-java-tar](https://user-images.githubusercontent.com/13813761/99601131-6e8d1280-29c4-11eb-86b2-5f08c76ebe5b.PNG)
+5. cd into the 'hashi' directory and run ‘vagrant up’. This will begin the setup of your virtual machine server with all the necessary Magento 2.3.x requirements.
 > cd C:\Users\\*user*\\*magento-projects*\\*magento-now*\\*hashi* <br/>
 > vagrant up
-5. Once it’s complete, run ‘vagrant ssh’ and you will be in your virtual machine. From here you can check that your local machine's 'src' folder is synced with your virtual machines '/var/www/html' directory. If you cd into '/var/www/html' you should find a 'index.html' file both in your virtual machine and your local 'src' folder. If you delete it either locally or on your VM, it should delete on the other as well.
-6. You're now ready to clone the Magento 2 repo.
+6. Once it’s complete, run ‘vagrant ssh’ and you will be in your virtual machine. From here you can check that your local machine's 'src' folder is synced with your virtual machines '/var/www/html' directory. If you cd into '/var/www/html' you should find a 'index.html' file both in your virtual machine and your local 'src' folder. If you delete it either locally or on your VM, it should delete on the other as well.
+7. You're now ready to clone the Magento 2 repo.
