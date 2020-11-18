@@ -34,6 +34,7 @@ This guide walks users through creating a virtual machine that runs Debian/Stret
 > cd C:\Users\\*user*\\*magento-projects*\\*magento-now* <br/>
 > mkdir src
 4. Head over to [Oracle](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) and download the Linux x64 Compressed Archive file and place it in your 'hashi' folder. 
+#### Make sure the version of the file you download matches with the version of the file referenced in the bootstrap.sh file. If not, then update all of the version numbers in the bootstrap file to match the downloaded file version.  
 ![linux-java-tar](https://user-images.githubusercontent.com/13813761/99601131-6e8d1280-29c4-11eb-86b2-5f08c76ebe5b.PNG)
 5. cd into the 'hashi' directory and run ‘vagrant up’. This will begin the setup of your virtual machine server with all the necessary Magento 2.3.x requirements.
 > cd C:\Users\\*user*\\*magento-projects*\\*magento-now*\\*hashi* <br/>
