@@ -2,15 +2,31 @@
 
 This guide walks users through creating a virtual machine that runs Debian/Stretch along with all of Magento's server requirements needed to run a Magento 2 installation.
 
-## System Requirements
+## Local System Requirements
 * [Vagrant](https://www.vagrantup.com/)
 * [VirtualBox](https://www.virtualbox.org/)
 * [Git](https://git-scm.com/)
 
+## What we are installing on the virtual machine
+* [DebianStretch OS](https://wiki.debian.org/DebianStretch)
+* [PHP 7.3](https://www.php.net/)
+* [Mariadb 10.1](https://mariadb.org/)
+  - Database: magento2
+  - User: vagrant
+  - Password: hashi
+* [Apache 2.4](https://httpd.apache.org/)
+* [Elasticsearch 6.x](https://www.elastic.co/)
+* [cURL](https://curl.se/)
+* [Composer](https://getcomposer.org/)
+* [Git](https://git-scm.com/)
+
 ## Installation Process
+#### This solution uses NFS. In order to use NFS with Vagrant on Windows, we need to install [this Vagrant NFS plugin](https://github.com/winnfsd/vagrant-winnfsd). Simply open a command prompt and run the following command to install the NFS plugin: 
+> vagrant plugin install vagrant-winnfsd
+### Steps
 1. Create a folder on your computer where you will store your Magento projects.
 > **Example:** C:\Users\\*user*\\*magento-projects*
-2. Open a command prompt. cd into your Magento projects folder and clone the vagrantfile and bootstrap files from this repository.
+2. Open a command prompt. cd into your Magento projects folder and clone this repository.
 > cd C:\Users\\*user*\\*magento-projects* <br/>
 > git clone https://github.com/osiris12/magento-now.git
 3. Once the repo has been cloned, cd into the repo directory and create a new folder called ‘src’. This will hold your Magento project.
